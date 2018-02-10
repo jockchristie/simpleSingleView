@@ -20,10 +20,37 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func segmentedControlWasChanged() {
-        if self.seg
+    @IBOutlet weak var segmentedControlForColors: UISegmentedControl!
     
+    @IBAction func segmentedControlChanged(_ sender: Any) {
+        // https://www.ioscreator.com/tutorials/segmented-control-tutorial-ios10
+        switch segmentedControlForColors.selectedSegmentIndex
+        {
+        case 0:
+            self.view.backgroundColor = UIColor.red;
+            break;
+        case 1:
+            self.view.backgroundColor = UIColor.orange;
+            break;
+        case 2:
+            self.view.backgroundColor = UIColor.yellow;
+            break;
+        case 3:
+            self.view.backgroundColor = UIColor.green;
+            break;
+        case 4:
+            self.view.backgroundColor = UIColor.blue;
+            break;
+        case 5:
+            self.view.backgroundColor = UIColor.purple;
+            break;
+        default:
+            break
+        }
+        
     }
+    
+    
 
 
 }
